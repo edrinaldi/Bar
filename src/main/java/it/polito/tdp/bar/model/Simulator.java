@@ -56,7 +56,7 @@ public class Simulator {
 			int nPersone = (int) (Math.random() * this.NUM_PERSONE_MAX + 1);
 			Duration durata = Duration.ofMinutes(this.DURATA_MIN + 
 					(int)(Math.random() * (this.DURATA_MAX - this.DURATA_MIN + 1)));
-			double tolleranza = Math.random() + this.TOLLERANZA_MAX;
+			double tolleranza = Math.random() * this.TOLLERANZA_MAX;
 			
 			Event e = new Event(arrivo, EventType.ARRIVO_GRUPPO_CLIENTI,
 					nPersone, durata, tolleranza, null);
